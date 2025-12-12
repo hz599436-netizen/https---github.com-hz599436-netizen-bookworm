@@ -17,11 +17,6 @@
     --accent-gold: #C9A959;
 }
 
-/* Prevent horizontal scrolling (disable side scroll) */
-html, body {
-    height: 100%;
-    overflow-x: hidden;
-}
 
 /* Allow vertical scrolling when page content exceeds viewport */
 body {
@@ -49,16 +44,27 @@ header {
     border-bottom: 5px solid var(--accent-gold);
 }
 
-/* Title */
-header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.8rem;
-    color: var(--cream);
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+/* Prevent horizontal scrolling site-wide, allow vertical scroll */
+html, body {
+    height: 100%;
+    overflow-x: hidden;
 }
 
+/* Ensure images never force horizontal overflow */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Review page specific styles */
+.other-books {
+    max-height: none;
+    overflow: visible;
+    padding-right: 0;
+    margin-top: 0.5rem;
+    clear: both;
+}
 /* Logo */
 header img {
     height: 75px;
@@ -391,6 +397,7 @@ section {
     overflow: visible;
     padding-right: 0;
     margin-top: 0.5rem;
+    clear: both;
 }
 
 .other-books p {
@@ -400,20 +407,52 @@ section {
     color: var(--dark-text);
 }
 
-/* Size review images to a normal thumbnail and keep them responsive */ 
+/* Size review images to a medium rectangular thumbnail and keep them responsive */
 .review-img {
-    max-width: 180px;
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0.6rem 0;
+    width: 160px;
+    height: 220px;
     object-fit: cover;
     border-radius: 0;
+    flex: 0 0 160px;
 }
 
-@media (min-width: 800px) {
+/* Grid layout for review cards: two per row on wide screens */
+/* Reviews as a vertical list (single column) to avoid horizontal scrolling */
+.reviews {
+    overflow-x: hidden;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.review-card {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.review-content {
+    flex: 1 1 auto;
+}
+
+@media (max-width: 800px) {
+    .reviews-grid {
+        /* small screens: single-column (same as desktop for list layout) */
+        grid-template-columns: 1fr;
+    }
+
+    .review-card {
+        flex-direction: column;
+    }
+
     .review-img {
-        width: 180px;
+        width: 100%;
+        height: auto;
+        flex: none;
     }
 }
 
