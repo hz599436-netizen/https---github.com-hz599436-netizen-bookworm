@@ -1,6 +1,4 @@
-/* bookworm.css - Review Page Specific Styles */
 
-/* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap');
 
 * {
@@ -19,7 +17,7 @@
     --light-cream: #FFFBF0;
 }
 
-/* Body and Base Styles */
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--dark-brown);
@@ -29,7 +27,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Header */
+
 header {
     background-color: var(--medium-brown);
     padding: 1.2rem 2.5rem;
@@ -49,7 +47,7 @@ header h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-/* Navigation */
+
 nav {
     display: flex;
     gap: 1.8rem;
@@ -82,19 +80,16 @@ nav a:hover {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
 }
 
-/* REVIEW PAGE SPECIFIC STYLES */
-
-/* Reviews Grid Container */
 .reviews-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 books per row */
+    grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
     margin: 2.5rem auto;
     max-width: 1300px;
     padding: 0 1.5rem;
 }
 
-/* Individual Review Card */
+
 .review-card {
     background-color: var(--light-cream);
     border-radius: 12px;
@@ -112,7 +107,7 @@ nav a:hover {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Book Title in Review Card */
+
 .review-card h4 {
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
@@ -122,7 +117,7 @@ nav a:hover {
     border-bottom: 2px solid var(--accent-gold);
 }
 
-/* Book Image and Description Layout */
+
 .book-content {
     display: flex;
     gap: 1.5rem;
@@ -130,7 +125,6 @@ nav a:hover {
     flex: 1;
 }
 
-/* Book Image */
 .book-cover {
     width: 140px;
     height: 200px;
@@ -141,7 +135,7 @@ nav a:hover {
     flex-shrink: 0;
 }
 
-/* Book Description */
+
 .book-description {
     flex: 1;
 }
@@ -153,7 +147,7 @@ nav a:hover {
     margin-bottom: 1rem;
 }
 
-/* Book Details (Genre, Rating) */
+
 .book-details {
     background-color: rgba(201, 169, 89, 0.1);
     padding: 1rem;
@@ -168,7 +162,7 @@ nav a:hover {
     color: var(--medium-brown);
 }
 
-/* "OTHER BOOKS" Section */
+
 .other-books-section {
     background-color: var(--cream);
     margin: 3rem auto;
@@ -190,10 +184,10 @@ nav a:hover {
     display: inline-block;
 }
 
-/* Other Books Grid */
+
 .other-books-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 books per row */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 1.5rem;
     margin-top: 2rem;
 }
@@ -225,7 +219,7 @@ nav a:hover {
     margin: 0.3rem 0;
 }
 
-/* Footer */
+
 footer {
     background-color: var(--medium-brown);
     padding: 2.2rem;
@@ -248,10 +242,10 @@ footer p:first-child {
     letter-spacing: 0.5px;
 }
 
-/* Responsive Design */
+
 @media (max-width: 1024px) {
     .reviews-grid {
-        grid-template-columns: 1fr; /* Stack on tablet */
+        grid-template-columns: 1fr;
         gap: 2rem;
         padding: 0 1rem;
     }
@@ -352,12 +346,12 @@ footer p:first-child {
     }
 }
 
-/* Background Pattern */
+
 body::after {
     content: '';
     position: fixed;
     top: 0;
-    left: 0;
+    left: 1;
     width: 100%;
     height: 100%;
     background-image: 
@@ -367,12 +361,12 @@ body::after {
     z-index: -1;
 }
 
-/* Smooth Scroll */
+
 html {
     scroll-behavior: smooth;
 }
 
-/* Focus States */
+
 a:focus,
 button:focus {
     outline: 3px solid var(--accent-gold);
