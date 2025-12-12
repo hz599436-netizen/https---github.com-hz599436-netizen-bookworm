@@ -12,7 +12,7 @@
     --dark-brown: #3D2B1F;
     --medium-brown: #6B4F3A;
     --light-brown: #8B7355;
-    --cream: #F5F0E6;
+    --cream: #a49d8f;
     --dark-text: #2C1810;
     --accent-gold: #C9A959;
 }
@@ -164,21 +164,12 @@ section:first-of-type p {
 
 
 section:nth-of-type(2) {
-    background-color: #F8F5ED;
+    background-color: #9f9c93;
     border-left: 6px solid var(--light-brown);
     position: relative;
 }
 
-section:nth-of-type(2)::before {
-    content: '"';
-    position: absolute;
-    top: 20px;
-    left: -35px;
-    font-family: 'Playfair Display', serif;
-    font-size: 8rem;
-    color: var(--accent-gold);
-    opacity: 0.3;
-}
+
 
 section:nth-of-type(2) h2 {
     font-family: 'Playfair Display', serif;
