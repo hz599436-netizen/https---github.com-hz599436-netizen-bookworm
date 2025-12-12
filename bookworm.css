@@ -18,13 +18,12 @@
 }
 
 
-/* Allow vertical scrolling when page content exceeds viewport */
 body {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
 
-/* Body - Dark Background */
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--dark-brown);
@@ -33,7 +32,7 @@ body {
     min-height: 100vh;
 }
 
-/* Header Styling */
+
 header {
     background-color: var(--medium-brown);
     padding: 1.2rem 2.5rem;
@@ -44,20 +43,20 @@ header {
     border-bottom: 5px solid var(--accent-gold);
 }
 
-/* Prevent horizontal scrolling site-wide, allow vertical scroll */
+
 html, body {
     height: 100%;
     overflow-x: hidden;
 }
 
-/* Ensure images never force horizontal overflow */
+
 img {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-/* Review page specific styles */
+
 .other-books {
     max-height: none;
     overflow: visible;
@@ -65,7 +64,7 @@ img {
     margin-top: 0.5rem;
     clear: both;
 }
-/* Logo */
+
 header img {
     height: 75px;
     width: 75px;
@@ -75,10 +74,10 @@ header img {
     object-fit: cover;
 }
 
-/* Navigation */
+
 nav {
     display: flex;
-    gap: 2rem; /* wider spacing between nav buttons */
+    gap: 2rem; 
 }
 
 nav li {
@@ -108,7 +107,6 @@ nav a:hover {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
 }
 
-/* Main Content Sections */
 section {
     background-color: var(--cream);
     margin: 2.5rem auto;
@@ -119,7 +117,6 @@ section {
     border: 1px solid rgba(139, 115, 85, 0.2);
 }
 
-/* Welcome Section */
 section:first-of-type {
     background: linear-gradient(145deg, var(--cream) 0%, #F8F3E9 100%);
     text-align: center;
@@ -165,7 +162,7 @@ section:first-of-type p {
     padding: 0 1rem;
 }
 
-/* About Us Section */
+
 section:nth-of-type(2) {
     background-color: #F8F5ED;
     border-left: 6px solid var(--light-brown);
@@ -202,7 +199,7 @@ section:nth-of-type(2) p {
     z-index: 1;
 }
 
-/* Footer */
+
 footer {
     background-color: var(--medium-brown);
     padding: 2.2rem;
@@ -225,7 +222,6 @@ footer p:first-child {
     letter-spacing: 0.5px;
 }
 
-/* Decorative Elements */
 body::after {
     content: '';
     position: fixed;
@@ -240,7 +236,6 @@ body::after {
     z-index: -1;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
     header {
         padding: 1rem 2rem;
@@ -360,7 +355,6 @@ body::after {
     }
 }
 
-/* Hover Animations */
 section {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -370,12 +364,12 @@ section:hover {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
-/* Smooth Scroll */
+
 html {
     scroll-behavior: smooth;
 }
 
-/* Focus States for Accessibility */
+
 a:focus,
 button:focus {
     outline: 3px solid var(--accent-gold);
@@ -383,7 +377,7 @@ button:focus {
     border-radius: 4px;
 }
 
-/* Book-like texture for sections */
+
 section {
     background-image: 
         linear-gradient(to right, transparent 98%, rgba(139, 115, 85, 0.1) 100%),
@@ -391,7 +385,7 @@ section {
     background-size: 30px 30px;
 }
 
-/* Review page specific styles */
+
 .other-books {
     max-height: none;
     overflow: visible;
@@ -407,7 +401,7 @@ section {
     color: var(--dark-text);
 }
 
-/* Size review images to a medium rectangular thumbnail and keep them responsive */
+
 .review-img {
     width: 160px;
     height: 220px;
@@ -416,8 +410,7 @@ section {
     flex: 0 0 160px;
 }
 
-/* Grid layout for review cards: two per row on wide screens */
-/* Reviews as a vertical list (single column) to avoid horizontal scrolling */
+
 .reviews {
     overflow-x: hidden;
 }
@@ -441,7 +434,7 @@ section {
 
 @media (max-width: 800px) {
     .reviews-grid {
-        /* small screens: single-column (same as desktop for list layout) */
+        
         grid-template-columns: 1fr;
     }
 
@@ -455,6 +448,3 @@ section {
         flex: none;
     }
 }
-
-/* Thin custom scrollbar for WebKit (appealing vertical scroll) */
-/* no custom scrollbar needed when content is not scrollable */
